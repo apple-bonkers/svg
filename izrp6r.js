@@ -1,4 +1,4 @@
-importScripts("0f1zy/kke3uv.js");
+importScripts("tiry9/jqyva1.js");
 
 self.addEventListener("install", () => self.skipWaiting());
 self.addEventListener("activate", (event) => event.waitUntil(self.clients.claim()));
@@ -7,7 +7,7 @@ function skipProxy(url) {
   try {
     const parsed = new URL(url);
     const host = parsed.hostname;
-    if (host === "cdn.jsdelivr.net" || host.endsWith(".jsdelivr.net") || host === "luminsdk.com" || host.endsWith(".luminsdk.com")) {
+    if (parsed.origin !== self.location.origin && (host === "cdn.jsdelivr.net" || host.endsWith(".jsdelivr.net") || host === "luminsdk.com" || host.endsWith(".luminsdk.com"))) {
       return true;
     }
     return /^\/(?:stores|covers|cdn)\//.test(parsed.pathname);
@@ -18,7 +18,7 @@ function skipProxy(url) {
 
 self.addEventListener("fetch", (event) => {
   if (skipProxy(event.request.url)) return;
-  if (_ygsbw77.shouldRoute(event)) {
-    event.respondWith(_ygsbw77.route(event));
+  if (_x1sgfsm.shouldRoute(event)) {
+    event.respondWith(_x1sgfsm.route(event));
   }
 });
