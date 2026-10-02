@@ -1,4 +1,4 @@
-importScripts("egspf/iwb865.js");
+importScripts("r5ab0/7s8am4.js");
 
 self.addEventListener("install", () => self.skipWaiting());
 self.addEventListener("activate", (event) => event.waitUntil(self.clients.claim()));
@@ -18,7 +18,7 @@ function skipProxy(url) {
 
 self.addEventListener("fetch", (event) => {
   if (skipProxy(event.request.url)) return;
-  if (_eddq4z6.shouldRoute(event)) {
-    event.respondWith(_eddq4z6.route(event));
+  if (_b35b1vc.shouldRoute(event)) {
+    event.respondWith(_b35b1vc.route(event));
   }
 });
